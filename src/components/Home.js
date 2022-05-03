@@ -2,10 +2,10 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-const LaunchShow = () => {
+const Home = () => {
   return (
-    <h1>LaunchShow</h1>
+    <h1>Home</h1>
   )
 }
 
-export default LaunchShow
+export default Home

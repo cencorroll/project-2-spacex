@@ -15,6 +15,7 @@ const CrewShow = () => {
   const { id } = useParams()
 
   const [crewMember, setCrewMember] = useState(null)
+  const [errors, setErrors] = useState(false)
 
   useEffect(() => {
     const getCrew = async () => {
@@ -24,6 +25,7 @@ const CrewShow = () => {
         setCrewMember(data)
       } catch (error) {
         console.log(error)
+        setErrors(true)
       }
     }
     getCrew()
@@ -57,7 +59,9 @@ const CrewShow = () => {
             </Col>
           </>
           :
-          <h2>Error</h2>
+          <h2 className='text-center'>
+            {errors ? 'Something went wrong! Please try again later!' : <h2>Loading...</h2>}
+          </h2>
         }
       </Row>
     </Container>

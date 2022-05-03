@@ -1,0 +1,14 @@
+.hero {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  .hero-container{
+    border-radius: 8px;
+    padding: 90px;
+    background-image: url(https://ichef.bbci.co.uk/news/640/cpsprodpb/7727/production/_103330503_musk3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

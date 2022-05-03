@@ -1,5 +1,5 @@
 import React from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
@@ -9,7 +9,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import axios from 'axios'
 
 const LaunchShow = () => {
   
@@ -17,7 +16,7 @@ const LaunchShow = () => {
 
   // State
 
-  const [ launch, setLaunch ] = useState(null)
+  const [launch, setLaunch] = useState(null)
 
   useEffect(() => {
     const getLaunch = async () => {
@@ -51,9 +50,9 @@ const LaunchShow = () => {
               <hr />
               <p>{launch.details}</p>
               <hr />
-              <p>Flight number</p>
+              <p>{launch.flight_number}</p>
               <hr />
-              <p>Flight Dates</p>
+              <p>{launch.date_local}</p>
               <hr />
               <Link to="/launches" className='btn btn-danger'>Back to Launches 🚀</Link>
             </Col>

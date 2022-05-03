@@ -20,7 +20,7 @@ const App = () => {
           
           {/* Need to put in path */}
           <Route path="/launches" element={<LaunchShow />} />
-          <h1>Project 2</h1>
+          <h1>Project 2 Hello</h1>
         </Routes>
       </BrowserRouter>
     </>

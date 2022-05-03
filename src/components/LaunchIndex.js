@@ -36,11 +36,11 @@ const LaunchIndex = () => {
         <Row>
           {launches.map(launch => {
             
-            const { name, id, data[] } = launch
+            const { name, id, links } = launch
             return (
               <Col key={id} md='5' lg='4' className='launch'>
                 <Card style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src={data[]}/>
+                  <Card.Img variant="top" src={links.patch.large}/>
                   <Card.Body>
                     <Card.Title>{name}</Card.Title>
                   </Card.Body>

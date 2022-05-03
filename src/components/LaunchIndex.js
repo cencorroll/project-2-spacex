@@ -31,7 +31,9 @@ const LaunchIndex = () => {
 
   return (
     <>
-      <h1>LaunchIndex</h1>
+      <div className='space-x'>
+        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/SpaceX_logo_black.svg/2560px-SpaceX_logo_black.svg.png'></img>
+      </div>
       <Container className='launch-list'>
         <Row>
           {launches.map(launch => {

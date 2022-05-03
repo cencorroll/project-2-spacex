@@ -1,5 +1,5 @@
 import React from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
@@ -9,15 +9,14 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import axios from 'axios'
 
 const LaunchShow = () => {
-  
+
   const { links, id } = useParams()
 
   // State
 
-  const [ launch, setLaunch ] = useState(null)
+  const [launch, setLaunch] = useState(null)
 
   useEffect(() => {
     const getLaunch = async () => {
@@ -33,30 +32,35 @@ const LaunchShow = () => {
   }, [id])
 
 
-  
+
   return (
     <>
       <Container className='launch-show'>
         <Row>
-          <Col xs="12">
-            {/* <h1>{launch.name}</h1> */}
-            <hr />
-          </Col>
-          <Col md="6">
-            <h1>IFRAME</h1>
-            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/"title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
-          </Col>
-          <Col md="6">
-            <p>SUCCESS</p>
-            <hr />
-            <p>DETAILS</p>
-            <hr />
-            <p>Flight number</p>
-            <hr />
-            <p>Flight Dates</p>
-            <hr />
-            <Link to="/launches" className='btn btn-danger'>Back to Launches 🚀</Link>
-          </Col>
+          {launch ?
+            <>
+              <Col xs="12">
+                <h1>{launch.name}</h1>
+                <hr />
+              </Col>
+              <Col md="10">
+                <iframe width="560" height="315" src= {`https://www.youtube.com/embed/${launch.links.youtube_id}`}  title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              </Col>
+              <Col md="6">
+                <p>SUCCESS</p>
+                <hr />
+                <p>{launch.details}</p>
+                <hr />
+                <p>{launch.flight_number}</p>
+                <hr />
+                <p>{launch.date_local}</p>
+                <hr />
+                <Link to="/launches" className='btn btn-danger'>Back to Launches 🚀</Link>
+              </Col>
+            </>
+            :
+            <h2>Error</h2>
+          }
         </Row>
       </Container>
 

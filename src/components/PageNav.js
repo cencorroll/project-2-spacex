@@ -17,6 +17,7 @@ const PageNav = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/launches">Launches</Nav.Link>
+            <Nav.Link as={Link} to="/crew">Crews</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -7,18 +7,15 @@ import { Row } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
 import { Card } from 'react-bootstrap'
 
-//states
+const CrewIndex = () => {
 
-
-const LaunchIndex = () => {
-
-  const [launches, setLaunches] = useState([])
+  const [crews, setCrews] = useState([])
 
   useEffect(() => {
-    const getLaunches = async () => {
+    const getCrews = async () => {
       try {
-        const { data } = await axios.get('https://api.spacexdata.com/v4/launches')
-        setLaunches(data)
+        const { data } = await axios.get('https://api.spacexdata.com/v4/crew')
+        setCrews(data)
         console.log(data)
 
       } catch (error) {
@@ -26,7 +23,7 @@ const LaunchIndex = () => {
       }
     }
 
-    getLaunches()
+    getCrews()
   }, [])
 
   return (
@@ -34,15 +31,15 @@ const LaunchIndex = () => {
       <div className='space-x'>
         <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/SpaceX_logo_black.svg/2560px-SpaceX_logo_black.svg.png'></img>
       </div>
-      <Container className='launch-list'>
+      <Container className='crew-list'>
         <Row>
-          {launches.map(launch => {
-            const { name, id, links } = launch
+          {crews.map(launch => {
+            const { name, id, launches, image, agency } = launch
             return (
               <Col key={id} md='5' lg='4' className='launch'>
-                <Link to={`/launches/${id}`}>
+                <Link to={`/crew/${id}`}>
                   <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={links.patch.large}/>
+                    <Card.Img variant="top" src={image}/>
                     <Card.Body>
                       <Card.Title>{name}</Card.Title>
                     </Card.Body>
@@ -59,4 +56,4 @@ const LaunchIndex = () => {
   )
 }
 
-export default LaunchIndex
+export default CrewIndex

@@ -33,6 +33,7 @@ const LaunchShow = () => {
 
   
   return (
+<<<<<<< HEAD
     <>
       <Container className='launch-show'>
         <Row>
@@ -64,6 +65,37 @@ const LaunchShow = () => {
       </Container>
 
     </>
+=======
+    <Container className='launch-show'>
+      <Row>
+        { launch ?
+          <>
+            <Col xs="12">
+              <h1>{launch.name}</h1>
+              <hr />
+            </Col>
+            <Col md="6">
+              <h1>IFRAME</h1>
+              <iframe width="560" height="315" src= {`https://www.youtube.com/embed/${launch.links.youtube_id}`}  title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            </Col>
+            <Col md="6">
+              <h3>{launch.success ? 'Successful' : 'Unsuccessful'}</h3>
+              <hr />
+              <p>{launch.details}</p>
+              <hr />
+              <p>{launch.flight_number}</p>
+              <hr />
+              <p>{launch.date_local}</p>
+              <hr />
+              <Link to="/launches" className='btn btn-danger'>Back to Launches 🚀</Link>
+            </Col>
+          </>
+          :
+          <h2>Error</h2>
+        }
+      </Row>
+    </Container>
+>>>>>>> cebaf74bf6feabeb2e688dbb0cc6b7d9aed4517f
   )
 }
 

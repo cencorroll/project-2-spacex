@@ -11,8 +11,8 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
 const LaunchShow = () => {
-
-  const { links, id } = useParams()
+  
+  const { id } = useParams()
 
   // State
 
@@ -31,8 +31,7 @@ const LaunchShow = () => {
     getLaunch()
   }, [id])
 
-
-
+  
   return (
     <>
       <Container className='launch-show'>

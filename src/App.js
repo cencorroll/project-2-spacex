@@ -13,7 +13,7 @@ import GalleryShow from './components/GalleryShow'
 const App = () => {
   return (
     <>
-      <h1></h1>
+
       <BrowserRouter>
         <PageNav />
         <Routes>

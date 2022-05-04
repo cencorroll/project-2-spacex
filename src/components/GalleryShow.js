@@ -88,7 +88,9 @@ const LaunchShow = () => {
           </div>
         </>
         :
-        <h2>Error</h2>
+        <h2 className='text-center'>
+          {errors ? 'Something went wrong! Please try again later!' : <h2>Loading...</h2>}
+        </h2>
 
       }
 

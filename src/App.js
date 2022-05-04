@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 //Import components
-import Home from './Home'
 import LaunchIndex from './components/LaunchIndex'
 import CrewIndex from './components/CrewIndex'
 import LaunchShow from './components/LaunchShow'
@@ -18,6 +17,7 @@ const App = () => {
       <BrowserRouter>
         <PageNav />
         <Routes>
+
 
           <Route path="/" element={<LaunchIndex />} />
           <Route path="/launches" element={<LaunchIndex />} />

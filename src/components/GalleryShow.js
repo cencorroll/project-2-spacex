@@ -6,8 +6,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+
 
 const LaunchShow = () => {
 
@@ -40,6 +39,7 @@ const LaunchShow = () => {
           <div>
             <h1>Gallery</h1>
             <Link to="/launches" className='btn btn-danger gallery-button' >Back to Launches</Link>
+            <Link to={`/launches/${id}`} className='btn btn-danger gallery-button'>Back to previous page</Link>
           </div>
 
 

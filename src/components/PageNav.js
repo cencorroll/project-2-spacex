@@ -10,7 +10,7 @@ import Container from 'react-bootstrap/Container'
 
 const PageNav = () => {
   return (
-    <Navbar bg="secondary" variant="dark" >
+    <Navbar variant="dark" className='navBar' >
       <Container className='launch ml-20'>
         <Navbar.Brand as={Link} to="/launches" className='navBarLinks'>Launches</Navbar.Brand>
         <Navbar.Brand as={Link} to="/crew">Crew</Navbar.Brand>

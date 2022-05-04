@@ -17,13 +17,9 @@ const App = () => {
       <BrowserRouter>
         <PageNav />
         <Routes>
-
-
           <Route path="/" element={<LaunchIndex />} />
           <Route path="/launches" element={<LaunchIndex />} />
           <Route path="/crew" element={<CrewIndex />} />
-  
-          
           {/* Need to put in path */}
           <Route path="/launches/:id" element={<LaunchShow />} />
           <Route path="/crew/:id" element={<CrewShow />} />

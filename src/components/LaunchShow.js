@@ -58,6 +58,7 @@ const LaunchShow = () => {
                 <p>{launch.date_local}</p>
                 <hr />
                 <Link to="/launches" className='btn btn-danger'>Back to Launches 🚀</Link>
+                <Link to={`/launches/${id}/gallery`} className='btn btn-danger gallery-btn'>Gallery</Link>
               </Col>
             </>
             :

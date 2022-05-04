@@ -8,7 +8,7 @@ const Home = () => {
     <div className="hero text-center">
       <div className="hero-container bg-light">
         <h1 className='display-3'>🚀 SpaceX </h1>
-        <p className='lead'>Discover all of SpaceX launches </p>
+        <p>Discover all of SpaceX launches </p>
         <Link to="/launches" className='btn btn-danger'>Discover Launches</Link>
       </div>
     </div>

@@ -51,7 +51,6 @@ const LaunchIndex = () => {
               </Col>
             )
           })}
-          
         </Row>
       </Container>
       <Link to="/">Back to home</Link>

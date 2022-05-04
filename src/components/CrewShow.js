@@ -46,22 +46,22 @@ const CrewShow = () => {
                 <img className='crew-img' src={crewMember.image} />
               </Col>
               <Col>
-                <h3>Status: {crewMember.status}</h3>
+                <h3>Status: {crewMember.status.toUpperCase()}</h3>
                 <hr />
-                <p>{crewMember.agency}</p>
+                <h3>Agency: {crewMember.agency}</h3>
                 <hr />
-                <p><Link as={Link} to= {`/launches/${crewMember.launches[0]}`} className='btn btn-primary'>Launch details 🚀</Link>{' '}</p>
+                <Link as={Link} to= {`/launches/${crewMember.launches[0]}`} className='btn btn-primary'>{} 🚀 Launch details </Link>
                 <hr />
-                <p><Button src={crewMember.wikipedia}>More information</Button>{' '}</p>
+                <Button href={crewMember.wikipedia}>More information</Button>
                 <hr />
                 <Link to="/crew" className='btn btn-danger'>Back to Crews 🚀</Link>
               </Col>
             </Col>
           </>
           :
-          <h2 className='text-center'>
+          <div className='text-center'>
             {errors ? 'Something went wrong! Please try again later!' : <h2>Loading...</h2>}
-          </h2>
+          </div>
         }
       </Row>
     </Container>

@@ -10,14 +10,13 @@ import Container from 'react-bootstrap/Container'
 
 const PageNav = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="secondary" variant="dark" >
       <Container className='launch ml-20'>
-        <Navbar.Brand as={Link} to="/">🚀 SpaceX</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/launches">
+          <img className='logo' src="https://www.logo.wine/a/logo/SpaceX/SpaceX-Logo.wine.svg"/>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/launches">Launches</Nav.Link>
-          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

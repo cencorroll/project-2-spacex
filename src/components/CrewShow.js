@@ -10,8 +10,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
-import launch from './LaunchShow'
-
 const CrewShow = () => {
 
   const { id } = useParams()
@@ -52,7 +50,7 @@ const CrewShow = () => {
                 <hr />
                 <h3>Agency: {crewMember.agency}</h3>
                 <hr />
-                <p><Link as={Link} to= {`/launches/${crewMember.launches[0]}`} className='btn btn-primary'>{} 🚀</Link>{' '}</p>
+                <p><Link as={Link} to= {`/launches/${crewMember.launches[0]}`} className='btn btn-primary'>{} 🚀 Launch details </Link>{' '}</p>
                 <hr />
                 <p><Button src={crewMember.wikipedia}>More information</Button>{' '}</p>
                 <hr />

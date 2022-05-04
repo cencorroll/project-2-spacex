@@ -19,7 +19,7 @@ const App = () => {
         <PageNav />
         <Routes>
 
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<LaunchIndex />} />
           <Route path="/launches" element={<LaunchIndex />} />
           <Route path="/crew" element={<CrewIndex />} />
   

@@ -22,7 +22,6 @@ const CrewIndex = () => {
         console.log(error)
       }
     }
-
     getCrews()
   }, [])
 
@@ -34,7 +33,7 @@ const CrewIndex = () => {
       <Container className='crew-list'>
         <Row>
           {crews.map(launch => {
-            const { name, id, launches, image, agency } = launch
+            const { name, id, image } = launch
             return (
               <Col key={id} md='5' lg='4' className='launch'>
                 <Link to={`/crew/${id}`}>
@@ -48,7 +47,6 @@ const CrewIndex = () => {
               </Col>
             )
           })}
-          
         </Row>
       </Container>
       <Link to="/">Back to home</Link>
@@ -57,3 +55,4 @@ const CrewIndex = () => {
 }
 
 export default CrewIndex
+

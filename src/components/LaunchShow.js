@@ -15,7 +15,7 @@ const LaunchShow = () => {
 
   // State
 
-  const [launch, setLaunch] = useState(null)
+  const [ launch, setLaunch ] = useState(null)
   const [ errors, setErrors ] = useState(false)
 
   useEffect(() => {

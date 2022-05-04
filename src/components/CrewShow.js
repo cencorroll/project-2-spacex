@@ -50,9 +50,9 @@ const CrewShow = () => {
                 <hr />
                 <h3>Agency: {crewMember.agency}</h3>
                 <hr />
-                <p><Link as={Link} to= {`/launches/${crewMember.launches[0]}`} className='btn btn-primary'>{} 🚀 Launch details </Link>{' '}</p>
+                <Link as={Link} to= {`/launches/${crewMember.launches[0]}`} className='btn btn-primary'>{} 🚀 Launch details </Link>
                 <hr />
-                <p><Button src={crewMember.wikipedia}>More information</Button>{' '}</p>
+                <Button href={crewMember.wikipedia}>More information</Button>
                 <hr />
                 <Link to="/crew" className='btn btn-danger'>Back to Crews 🚀</Link>
               </Col>

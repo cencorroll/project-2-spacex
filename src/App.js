@@ -8,6 +8,7 @@ import CrewIndex from './components/CrewIndex'
 import LaunchShow from './components/LaunchShow'
 import CrewShow from './components/CrewShow'
 import PageNav from './components/PageNav'
+import GalleryShow from './components/GalleryShow'
 
 
 const App = () => {
@@ -21,10 +22,12 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/launches" element={<LaunchIndex />} />
           <Route path="/crew" element={<CrewIndex />} />
+  
           
           {/* Need to put in path */}
           <Route path="/launches/:id" element={<LaunchShow />} />
           <Route path="/crew/:id" element={<CrewShow />} />
+          <Route path="launches/:id/gallery" element={<GalleryShow />} />
         </Routes>
       </BrowserRouter>
     </>

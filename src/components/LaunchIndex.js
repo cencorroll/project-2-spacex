@@ -20,7 +20,6 @@ const LaunchIndex = () => {
         const { data } = await axios.get('https://api.spacexdata.com/v4/launches')
         setLaunches(data)
         console.log(data)
-
       } catch (error) {
         console.log(error)
       }
